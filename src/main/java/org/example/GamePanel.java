@@ -5,9 +5,7 @@ import Inputs.MouseInputs;
 import java.util.*;
 
 import javax.swing.*;
-        import java.awt.*;
-        import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
+import java.awt.*;
 
 public class GamePanel extends JPanel {
     private MouseInputs mouseInputs;
@@ -27,18 +25,15 @@ public class GamePanel extends JPanel {
 
     public void changeXDelta(int value) {
         this.xDelta += value;
-//        repaint();
     }
 
     public void changeYDelta(int value) {
         this.yDelta += value;
-//        repaint();
     }
 
     public void setRectPos(int x, int y) {
         this.xDelta = x;
         this.yDelta = y;
-//        repaint();
     }
 
     public void paintComponent(Graphics g) {
