@@ -11,8 +11,6 @@ public class GamePanel extends JPanel {
     private MouseInputs mouseInputs;
     private float xDelta = 100, yDelta = 100;
     private float xDir = 1f, yDir = 1f;
-    private int frames = 0;
-    private long lastCheck = 0;
     private Color color = new Color(150, 20, 90);
     private Random random;
     public GamePanel() {
@@ -41,12 +39,6 @@ public class GamePanel extends JPanel {
         updateRectangle();
         g.setColor(color);
         g.fillRect((int)xDelta,  (int)yDelta, 200, 50);
-        frames++;
-        if(System.currentTimeMillis() - lastCheck >= 1000) {
-            lastCheck = System.currentTimeMillis();
-            System.out.println("FPS: " + frames);
-            frames = 0;
-        }
     }
 
    private void updateRectangle() {
